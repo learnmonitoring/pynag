@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python33
 #
 # This script looks for files in your configuration that have no objects in them.
 #

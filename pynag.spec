@@ -15,6 +15,7 @@
 %endif
 
 %define release 1
+%define __python /usr/bin/python3
 
 
 Summary: Python modules and utilities for Nagios plugins and configuration
@@ -24,17 +25,26 @@ Release: %{release}%{?dist}
 Source0: http://pynag.googlecode.com/files/%{name}-%{version}.tar.gz
 License: GPLv2
 Group: System Environment/Libraries
+
+%if 0%{?rhel} == 6
+BuildRequires: python-unittest2
 Requires: python-six
 Requires: python-chardet
 BuildRequires: python-devel
 BuildRequires: python-setuptools
 BuildRequires: python-six
+%else
+Requires: python3-six
+Requires: python3-chardet
+BuildRequires: python3-devel
+BuildRequires: python3-setuptools
+BuildRequires: python3-six
+BuildRequires: python3-unittest2
+%endif
+
 BuildRoot: %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 Url: http://pynag.org/
 BuildArch: noarch
-%if 0%{?unittest2}
-BuildRequires: python-unittest2
-%endif
 
 %description
 Python modules and utilities for pragmatically handling Nagios configuration

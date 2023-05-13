@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 # This pynag script will parse all your nagios configuration
 # And write a copy of every single object to /tmp/nagios/conf.d

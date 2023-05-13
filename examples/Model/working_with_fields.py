@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python33
 #
 # This example shows how to work with attributes in nagios that
 # Are in a comma-seperated form. Like this:

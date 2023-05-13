@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python33
 #
 # Example script on how to modify a single Nagios service
 
